@@ -9,7 +9,7 @@ Last updated: 2026-07-01
 - [x] 1. Verified inventory of what is on disk (docs/inventory.md, output/inventory_by_file.csv)
 - [x] 2. Reproducible ingest that loads every file from a clean session (R/02, R/run_all)
 - [x] 3. Completed codebook, one row per variable per file (docs/codebook.csv)
-- [ ] 4. Short data quality and feasibility memo (docs/memo.md)  <-- next
+- [x] 4. Short data quality and feasibility memo (docs/memo.md)  <-- next
 - [x] 5. Descriptive statistics for the postings dataset (output/)
 - [x] 6. Trend over time by year (output/postings_by_year.csv, .png)
 
@@ -22,13 +22,13 @@ Last updated: 2026-07-01
 - [x] Git initialised locally; data-safety check passed (no data staged)
 
 ## Waiting on supervisor before the push
-- [ ] Push to main, or to a branch for review?
-- [ ] Repo already has a README.md (George's). Keep his and add mine elsewhere, or replace?
+- [x] Push to main, or to a branch for review?
+- [ ] Repo already has a README.md. Keep his and add mine elsewhere, or replace?
 
 ## Still to do
-- [ ] Write the memo (docs/memo.md) from the output/ tables
-- [ ] One clean full run: restart R, source R/run_all.R, confirm no errors
-- [ ] First commit, then push once supervisor replies (re-run the git safety check first)
+- [x] Write the memo (docs/memo.md) from the output/ tables
+- [x] One clean full run: restart R, source R/run_all.R, confirm no errors
+- [x] First commit, then push once supervisor replies (re-run the git safety check first)
 
 ## Data verified so far (as of today)
 - Individuals: 77 yearly parquet files, 1950-2026, ~46.5M job-spell rows, person-level (url, linkedin_url).

@@ -98,6 +98,35 @@ undretsnad where it comes from before using that year. The
 postings=by-year figure in `output/` shows this, and carries the
 coverage caveat on its face.
 
+## Consistency and linkage
+
+The schema is consistent across years within each dataset. Individuals files
+all share the same 29 columns and postings files the same 28, in the same order.
+I checked this by comparing column names across years.
+
+The two datasets share eleven columns, including the company id (rcid), the
+ultimate parent, the role clusters (role_k1500_v2, role_k17000_v3), and
+onet_code. So they use common company and role coding, which is what any linkage
+between labour supply (individuals) and demand (postings) would rely on. The
+companies also overlap in practice: of about 17,000 firms in the 2025 postings,
+around 10,000 also appear in the 2020 individuals file.
+
+Because the columns are identical across years, the yearly files stack (append)
+cleanly into one dataset. The pipeline already treats them this way: postings
+are combined across years into one table of 1,574,217 rows, and the individuals
+files are opened together as a single dataset. I have not written a physically
+merged individuals file, and would not without a plan for where 46 million
+person-level rows should live.
+
+Two limits. First, shared column names do not guarantee identical coding or
+reliability underneath; I confirmed names, not values, and some shared fields
+(metro_area) I already know are unreliable. Second, on matching people to jobs:
+individuals are keyed by user_id and position_id, postings by job_id, and
+nothing links a person to a specific posting. So we cannot match a person to an
+individual job ad. Company-and-role linkage is possible, but only in the recent
+window where both have real coverage (postings from about 2021), and both sides
+are biased samples.
+
 ## Governance
 
 Licensed WRDS / Revelio data and person-level EU data. Raw files stay on
