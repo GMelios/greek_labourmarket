@@ -1,0 +1,47 @@
+# --- data must never enter the repo ----------------------------------------
+# The brief asks to exclude the data directory and any raw data file so that
+# person-level data can never be pushed by accident.
+data/
+/data/**
+*.csv
+*.tsv
+*.dta
+*.parquet
+*.RData
+*.rdata
+*.rds
+
+# --- exceptions: the aggregate deliverables we DO want committed ------------
+# A blanket *.csv ignore would also drop the codebook and the aggregate output
+# tables, which are the point of the project. These are aggregates only (no
+# person-level rows), so we force-add them back. Nothing else under output/ or
+# docs/ is a raw data file.
+!docs/codebook.csv
+!output/*.csv
+
+# --- laptop path (the path constant) ---------------------------------------
+# R/config.R holds DATA_DIR for this laptop. Never committed. Each person keeps
+# their own; R/config.example.R is the committed template.
+R/config.R
+.Renviron
+
+# --- R / renv / RStudio ----------------------------------------------------
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+renv/library/
+renv/local/
+renv/cellar/
+renv/lock/
+renv/python/
+renv/sandbox/
+renv/staging/
+
+# --- OS noise --------------------------------------------------------------
+.DS_Store
+Thumbs.db
+
+# postings files are .csv.zip; block all zip archives too
+*.zip
+.positai

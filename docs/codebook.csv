@@ -1,0 +1,58 @@
+file,variable,type,pct_missing,n_distinct,example_values,observed_or_modelled,notes
+Postings,rcid,numeric,41.47,17290,[redacted: identifier or link],observed_unverified,stats from 2025 file
+Postings,post_date,Date,0,365,2025-05-16 | 2025-05-30 | 2025-07-16,observed_unverified,stats from 2025 file
+Postings,job_id,numeric,0,454952,[redacted: identifier or link],observed_unverified,stats from 2025 file
+Postings,company,character,41.61,17201,"[redacted: high-cardinality text, 17201 distinct]",observed_unverified,stats from 2025 file
+Postings,country,character,0,1,Greece,observed_unverified,stats from 2025 file
+Postings,role_k1500_v2,character,0,1501,"[redacted: high-cardinality text, 1501 distinct]",modelled (role_cluster),"modelled field, not ground truth. stats from 2025 file"
+Postings,state,character,0,15,Attica      | empty       | Peloponnese,observed_unverified,stats from 2025 file
+Postings,role_k17000_v3,character,1.04,11304,"[redacted: high-cardinality text, 11304 distinct]",modelled (role_cluster),"modelled field, not ground truth. stats from 2025 file"
+Postings,metro_area,character,0,3,athens metropolitan area             | greece nonmetropolitan area          | dimos thessaloniki metropolitan area,observed_unverified,stats from 2025 file
+Postings,onet_code,character,1.04,952,"[redacted: high-cardinality text, 952 distinct]",modelled (occupation),"modelled field, not ground truth. stats from 2025 file"
+Postings,salary,numeric,0.31,310985,18906.95 | 81707.44 | 26324.73,modelled (salary),"modelled field, not ground truth. stats from 2025 file"
+Postings,salary_min,numeric,96.58,2255,14 | 45000 | 29120,modelled (salary),"modelled field, not ground truth. stats from 2025 file"
+Postings,salary_max,numeric,97.17,2165,17 | 50000 | 35360,modelled (salary),"modelled field, not ground truth. stats from 2025 file"
+Postings,salary_predicted,logical,0.31,2,TRUE | FALSE,modelled (salary),"modelled field, not ground truth. stats from 2025 file"
+Postings,remove_date,Date,2.83,431,2025-07-15 | 2025-06-06 | 2026-01-06,observed_unverified,stats from 2025 file
+Postings,ultimate_parent_rcid,numeric,41.61,16538,[redacted: identifier or link],observed_unverified,stats from 2025 file
+Postings,ultimate_parent_company_name,character,41.61,16537,"[redacted: high-cardinality text, 16537 distinct]",observed_unverified,stats from 2025 file
+Postings,remote_type,character,0,5,Fully In Office     | Fully Remote        | Remote In Territory,observed_unverified,stats from 2025 file
+Postings,expected_hires,numeric,0,18330,0.2971740 | 0.3234406 | 0.4885283,modelled (hires),"modelled field, not ground truth. stats from 2025 file"
+Postings,source_company_sites,logical,0,2,TRUE | FALSE,observed_unverified,stats from 2025 file
+Postings,source_linkedin,logical,0,2,[redacted: identifier or link],observed_unverified,stats from 2025 file
+Postings,source_indeed,logical,0,2,TRUE | FALSE,observed_unverified,stats from 2025 file
+Postings,source_zhaopin,logical,0,1,FALSE,observed_unverified,stats from 2025 file
+Postings,source_51job,logical,0,1,FALSE,observed_unverified,stats from 2025 file
+Postings,source_liepin,logical,0,1,FALSE,observed_unverified,stats from 2025 file
+Postings,source_other_aggregators,logical,0,1,FALSE,observed_unverified,stats from 2025 file
+Postings,source_staffingfirms,logical,0,2,TRUE | FALSE,observed_unverified,stats from 2025 file
+Postings,source_regional_aggregators,logical,0,2,FALSE | TRUE,observed_unverified,stats from 2025 file
+Individuals,seniority,integer,0,7,1 | 5 | 2,modelled (seniority),"modelled field, not ground truth. stats from 2020 file"
+Individuals,ticker,character,92.64,2597,[redacted: identifier or link],observed_unverified,stats from 2020 file
+Individuals,startdate,Date,22.65,823,2020-01-01 | 2000-01-01 | 2012-09-01,observed_unverified,stats from 2020 file
+Individuals,user_id,numeric,0,1063571,[redacted: identifier or link],observed_unverified,stats from 2020 file
+Individuals,position_id,numeric,0,1397410,[redacted: identifier or link],observed_unverified,stats from 2020 file
+Individuals,country,character,0,1,Greece,observed_unverified,stats from 2020 file
+Individuals,region,character,0,1,Southern Europe,observed_unverified,stats from 2020 file
+Individuals,state,character,43.77,14,Crete             | Central Macedonia | Attica           ,observed_unverified,stats from 2020 file
+Individuals,metro_area,character,43.77,3,greece nonmetropolitan area          | athens metropolitan area             | dimos thessaloniki metropolitan area,observed_unverified,stats from 2020 file
+Individuals,msa,character,100,2,TX NONMETROPOLITAN AREA                               | New York-Northern New Jersey-Long Island NY-NJ-PA MSA,observed_unverified,stats from 2020 file
+Individuals,enddate,Date,64.93,79,2020-09-01 | 2022-05-01 | 2024-12-01,observed_unverified,stats from 2020 file
+Individuals,city,character,45.42,1697,"[redacted: high-cardinality text, 1697 distinct]",observed_unverified,stats from 2020 file
+Individuals,remote_suitability,numeric,0,33680,0.005128122 | 0.181236923 | 0.500000000,modelled (remote),"modelled field, not ground truth. stats from 2020 file"
+Individuals,weight,numeric,0,791644,1.230749 | 1.079374 | 1.127075,modelled (weight),"modelled field, not ground truth. stats from 2020 file"
+Individuals,role_k1500_v2,character,0,1497,"[redacted: high-cardinality text, 1497 distinct]",modelled (role_cluster),"modelled field, not ground truth. stats from 2020 file"
+Individuals,start_salary,numeric,0.08,1109057,9487.54 | 7701.65 | 65582.23,modelled (salary),"modelled field, not ground truth. stats from 2020 file"
+Individuals,role_k17000_v3,character,0.01,15456,"[redacted: high-cardinality text, 15456 distinct]",modelled (role_cluster),"modelled field, not ground truth. stats from 2020 file"
+Individuals,end_salary,numeric,0.01,1145123,9751.24 | 16843.04 | 94027.57,modelled (salary),"modelled field, not ground truth. stats from 2020 file"
+Individuals,salary,numeric,0.01,1145123,9751.24 | 16843.04 | 94027.57,modelled (salary),"modelled field, not ground truth. stats from 2020 file"
+Individuals,position_number,integer,0,68,7 | 1 | 3,observed_unverified,stats from 2020 file
+Individuals,total_compensation,numeric,0.01,1180764,9751.24 | 19103.75 | 145913.10,modelled (salary),"modelled field, not ground truth. stats from 2020 file"
+Individuals,additional_compensation,numeric,0.01,730924,0.00 | 2260.71 | 51885.53,modelled (salary),"modelled field, not ground truth. stats from 2020 file"
+Individuals,onet_code,character,0.01,995,"[redacted: high-cardinality text, 995 distinct]",modelled (occupation),"modelled field, not ground truth. stats from 2020 file"
+Individuals,rcid,numeric,38.93,120681,[redacted: identifier or link],observed_unverified,stats from 2020 file
+Individuals,ultimate_parent_rcid,numeric,38.93,114415,[redacted: identifier or link],observed_unverified,stats from 2020 file
+Individuals,company,character,38.93,120681,"[redacted: high-cardinality text, 120681 distinct]",observed_unverified,stats from 2020 file
+Individuals,ultimate_parent_company_name,character,38.93,114415,"[redacted: high-cardinality text, 114415 distinct]",observed_unverified,stats from 2020 file
+Individuals,url,character,44.99,98158,[redacted: identifier or link],observed_unverified,stats from 2020 file
+Individuals,linkedin_url,character,38.93,120681,[redacted: identifier or link],observed_unverified,stats from 2020 file

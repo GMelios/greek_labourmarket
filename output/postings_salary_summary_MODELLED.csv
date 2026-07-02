@@ -1,0 +1,2 @@
+field,note,n_nonmissing,mean,min,max
+salary_predicted,MODELLED prediction from title/geography. Not an observed wage. Do not use as a regression outcome without deliberate handling (circularity).,1571207,0.96,0,1

@@ -1,0 +1,29 @@
+variable,n_na,pct_missing,modelled
+salary_max,1536302,97.59,modelled (salary)
+salary_min,1527074,97.01,modelled (salary)
+company,636940,40.46,observed_unverified
+ultimate_parent_company_name,636950,40.46,observed_unverified
+ultimate_parent_rcid,636919,40.46,observed_unverified
+rcid,635018,40.34,observed_unverified
+remove_date,50365,3.2,observed_unverified
+onet_code,5363,0.34,modelled (occupation)
+role_k17000_v3,5363,0.34,modelled (role_cluster)
+salary,3010,0.19,modelled (salary)
+salary_predicted,3010,0.19,modelled (salary)
+country,0,0,observed_unverified
+expected_hires,0,0,modelled (hires)
+job_id,0,0,observed_unverified
+metro_area,0,0,observed_unverified
+post_date,0,0,observed_unverified
+remote_type,0,0,observed_unverified
+role_k1500_v2,0,0,modelled (role_cluster)
+source_51job,0,0,observed_unverified
+source_company_sites,0,0,observed_unverified
+source_indeed,0,0,observed_unverified
+source_liepin,0,0,observed_unverified
+source_linkedin,0,0,observed_unverified
+source_other_aggregators,0,0,observed_unverified
+source_regional_aggregators,0,0,observed_unverified
+source_staffingfirms,0,0,observed_unverified
+source_zhaopin,0,0,observed_unverified
+state,0,0,observed_unverified
