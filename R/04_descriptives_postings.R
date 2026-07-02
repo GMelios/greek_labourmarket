@@ -16,7 +16,6 @@ per_year <- purrr::map(paths, function(f) {
   df  <- read_postings_file(f)
   has <- function(nm) nm %in% names(df)
   yr  <- if (has("post_date")) as.integer(stringr::str_extract(as.character(df$post_date), "\\d{4}")) else NA_integer_
-  sal <- if (has("salary_predicted")) suppressWarnings(as.numeric(df$salary_predicted)) else numeric(0)
   list(
     rows    = nrow(df),
     na      = tibble::tibble(variable = names(df),
@@ -24,13 +23,7 @@ per_year <- purrr::map(paths, function(f) {
     year    = tibble::tibble(year = yr) |> dplyr::filter(!is.na(year)) |> dplyr::count(year, name = "n"),
     rolek   = if (has("role_k1500_v2")) dplyr::count(df, level = role_k1500_v2, name = "n") else NULL,
     country = if (has("country")) dplyr::count(df, level = country, name = "n") else NULL,
-    firm    = if (has("rcid")) dplyr::count(df, rcid, name = "n") else NULL,
-    sal     = tibble::tibble(
-                n   = sum(!is.na(sal)),
-                sum = sum(sal, na.rm = TRUE),
-                min = if (any(!is.na(sal))) min(sal, na.rm = TRUE) else NA_real_,
-                max = if (any(!is.na(sal))) max(sal, na.rm = TRUE) else NA_real_
-              )
+    firm    = if (has("rcid")) dplyr::count(df, rcid, name = "n") else NULL
   )
 })
 
@@ -79,16 +72,36 @@ purrr::map_dfr(per_year, "firm") |>
   dplyr::slice_head(n = 25) |>
   readr::write_csv(fs::path(OUTPUT_DIR, "postings_top_companies.csv"))
 
-# salary_predicted summary (MODELLED)
-sal_all <- purrr::map_dfr(per_year, "sal")
-sal_summ <- tibble::tibble(
-  field = "salary_predicted",
-  note  = "MODELLED prediction from title/geography. Not an observed wage. Do not use as a regression outcome without deliberate handling (circularity).",
-  n_nonmissing = sum(sal_all$n),
-  mean = if (sum(sal_all$n) > 0) round(sum(sal_all$sum) / sum(sal_all$n), 2) else NA_real_,
-  min  = suppressWarnings(min(sal_all$min, na.rm = TRUE)),
-  max  = suppressWarnings(max(sal_all$max, na.rm = TRUE))
-)
+# salary summary (MODELLED): summarise the actual `salary` amounts, split by the
+# salary_predicted flag. The earlier version summarised the flag by mistake.
+# This reads only the two salary columns across all years, which is cheap.
+sal_raw <- purrr::map_dfr(postings_files(), function(f) {
+  read_postings_file(f, columns = c("salary", "salary_predicted"))
+})
+sal_raw <- dplyr::mutate(sal_raw, salary = suppressWarnings(as.numeric(salary)))
+
+fin <- function(x) if (any(is.finite(x))) x else NA_real_
+sal_summ <- sal_raw |>
+  dplyr::group_by(salary_predicted) |>
+  dplyr::summarise(
+    n          = dplyr::n(),
+    n_missing  = sum(is.na(salary)),
+    n_zero     = sum(salary == 0, na.rm = TRUE),
+    min        = fin(suppressWarnings(min(salary, na.rm = TRUE))),
+    p25        = stats::quantile(salary, 0.25, na.rm = TRUE),
+    median     = stats::median(salary, na.rm = TRUE),
+    mean       = round(mean(salary, na.rm = TRUE)),
+    p75        = stats::quantile(salary, 0.75, na.rm = TRUE),
+    max        = fin(suppressWarnings(max(salary, na.rm = TRUE))),
+    .groups = "drop"
+  ) |>
+  dplyr::mutate(
+    note = dplyr::case_when(
+      salary_predicted %in% c(TRUE, "TRUE", 1)  ~ "MODELLED prediction. Not an observed wage. Do not use as a regression outcome without care (circularity).",
+      salary_predicted %in% c(FALSE, "FALSE", 0) ~ "Non-predicted, but meaning of the flag is unconfirmed. Contains zeros and outliers; needs cleaning before use.",
+      TRUE ~ "No salary flag; salary is missing for these rows."
+    )
+  )
 readr::write_csv(sal_summ, fs::path(OUTPUT_DIR, "postings_salary_summary_MODELLED.csv"))
 
 message("[descriptives] done. All tables in output/ are aggregates.")

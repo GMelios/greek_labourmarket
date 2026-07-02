@@ -1,2 +1,4 @@
-field,note,n_nonmissing,mean,min,max
-salary_predicted,MODELLED prediction from title/geography. Not an observed wage. Do not use as a regression outcome without deliberate handling (circularity).,1571207,0.96,0,1
+salary_predicted,n,n_missing,n_zero,min,p25,median,mean,p75,max,note
+FALSE,55316,0,20,0,11199.378807788797,14595.776320785551,23355,21470.50679782057,987134.7763685128,"Non-predicted, but meaning of the flag is unconfirmed. Contains zeros and outliers; needs cleaning before use."
+TRUE,1515891,0,0,5315.536191921539,17825.92536995997,23226.538613575252,29007,35088.85588594689,292044.72760924604,MODELLED prediction. Not an observed wage. Do not use as a regression outcome without care (circularity).
+NA,3010,3010,0,NA,NA,NA,NA,NA,NA,No salary flag; salary is missing for these rows.
