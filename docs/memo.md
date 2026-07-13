@@ -31,23 +31,34 @@ on 1,574,217 rows.
 
 ## Coverage and selection
 
-Coverage is low and non-random.The sample skews white-collar, tertiary
-educated, urban (Athens and Thessaloniki), younger, techn and finance
-and multinational employers, and English-fluent. Greece's economy is
-heavy on SMEs, tourism, shipping, self-employment, the public sector,
-and informal work, most of which is missing or badly undercounted here.
-Any statement we make describes the covered population, not Greek
-workers in general. This limits external validity for anything at the
-level of the national labour market.
+Coverage is low and non-random.The sample skews toward professional, office, and
+technical work, tertiary educated, urban, younger, and English-fluent. Checking 
+the occupation codes directly, the largest groups are computing, sales, office 
+administration, management, and business, with substantial food service too, 
+while manual, agricultural, and informal work is thin or absent (there is no 
+farming, fishing, or forestry at all). Greece's economy isheavy on SMEs, 
+tourism, shipping, self-employment, the public sector, and informal work, most 
+of which is missing or badly undercounted here. Any statement we make describes 
+the covered population, not Greek workers in general. This limits external 
+validity for anything at the level of the national labour market.
 
-A geographic breakdown of the 2020 individuals file supports this. Attica
-(Athens) holds about 35 percent of records and Central Macedonia (Thessaloniki's
-region) about 9 percent, with every other region small and 44 percent of records
-carrying no state at all. This is a strong Athens skew. Checking geography also
-surfaced a data-quality problem: the metro_area field is unreliable. It reported
-only 47 Thessaloniki records, while the city field showed 86,804 and the state
-field showed 123,317 for Central Macedonia. Geography should be taken from state
-or city, not metro_area.
+## Geography quality
+
+Regional analysis is only partly reliable, and which field you use matters. In
+the individuals data, the metro_area field is not trustworthy: it reported only
+47 Thessaloniki records while the city field showed 86,804 and the state field
+showed 123,317 for the surrounding region. So metro_area disagrees badly with
+city and state, and should not be used. The state field is reliable and shows a
+strong Athens skew: Attica holds about 35 percent of records and Central
+Macedonia about 9 percent, with everything else small and about 44 percent
+carrying no state.
+
+Missing geography is also encoded inconsistently: postings use the literal word
+"empty" for a missing region, individuals use a blank (NA), so both forms have
+to be caught. Postings geography is more complete than individuals (under 10
+percent missing state, versus 44 percent). So regional analysis is feasible
+using the state or city fields, not metro_area, and should account for the heavy
+Athens concentration and the large share of records with no region.
 
 ## Modelled fields
 
@@ -87,16 +98,37 @@ reflecting platform adoption rather than the labour market.
 
 ## Postings coverage over time
 
-The postings data covers 2010 to 2026, but only becomees usable from
-around 2021. The earlier years are very thin, often only a few hundred
-postings for the entire country, which is too little to mean anything.
-From 2021 the volume grows steadily, from about 69,000 to 455,000 by
-2025, with 2026 partial because the year is incomplete. One year stands
-out: 2016 has around 51,000 postings, sitting between years with only a
-few hundred. I cannot explain that spike yet, so I would flag it and
-undretsnad where it comes from before using that year. The
-postings=by-year figure in `output/` shows this, and carries the
-coverage caveat on its face.
+The postings data covers 2010 to 2026, but only becomes usable from around 2021.
+The earlier years are very thin, often only a few hundred postings for the 
+entire country, which is too little to mean anything. From 2021 the volume grows
+steadily, from about 69,000 to 455,000 by 2025, with 2026 partial because the 
+year is incomplete. One year stands out: 2016 has 51,061 postings, sitting 
+between years with only a few hundred. This is a data-source artefact, not real 
+hiring: 51,041 of those postings (99.96 percent) came from Indeed, a single 
+large dump. More broadly the sources change over time, LinkedIn does not appear 
+until around 2020, and the share of postings with a company id swings year to 
+year. So any cross-year comparison partly reflects changes in data sources, not 
+the labour market.
+
+Testing that directly confirms it. Comparing postings per year three ways, all 
+postings, only those with a company id, and excluding Indeed, the 2016 spike of 
+51,061 drops to 20 once Indeed is removed, so it was entirely a source dump. In 
+recent years the effect is large too: 2023 and 2024 rise from 333,000 to 418,000
+in the raw counts, but excluding Indeed they are flat at about 158,000 and 
+160,000, so most of that apparent growth is Indeed being added, not more hiring.
+There is genuine growth earlier (2020 to 2022 roughly doubles even without 
+Indeed), but the raw series should not be read as a hiring trend. The safer 
+series excludes Indeed or requires a company id.
+
+The monthly view dates these source changes exactly. Indeed first appears in 
+December 2015 (so the 2016 dump is Indeed switching on), and LinkedIn first 
+appears in May 2020, which is when the 2020-2021 rise begins. Before 2016 only 
+company sites and staffing firms feed the data, which is why the early years are
+so thin. So the shape of the series tracks when each source came online as much 
+as any change in hiring.
+
+The postings-by-year figure in `output/` shows this, and carries the coverage 
+caveat on its face.
 
 ## Consistency and linkage
 
@@ -107,9 +139,10 @@ I checked this by comparing column names across years.
 The two datasets share eleven columns, including the company id (rcid), the
 ultimate parent, the role clusters (role_k1500_v2, role_k17000_v3), and
 onet_code. So they use common company and role coding, which is what any linkage
-between labour supply (individuals) and demand (postings) would rely on. The
-companies also overlap in practice: of about 17,000 firms in the 2025 postings,
-around 10,000 also appear in the 2020 individuals file.
+between labour supply (individuals) and demand (postings) would rely on. The 
+companies also overlap in practice: across all years there are about 33,700 
+firms in the postings, and about 22,200 of them also appear in the individuals 
+data, roughly two-thirds of posting firms.
 
 Because the columns are identical across years, the yearly files stack (append)
 cleanly into one dataset. The pipeline already treats them this way: postings
@@ -126,6 +159,22 @@ nothing links a person to a specific posting. So we cannot match a person to an
 individual job ad. Company-and-role linkage is possible, but only in the recent
 window where both have real coverage (postings from about 2021), and both sides
 are biased samples.
+
+## Firm-level feasibility
+
+Whether firms can be analysed over time depends on how much data each firm has.
+Across all postings years there are 33,717 firms with a company id, but most are
+thin: the median firm has 3 postings across 2 years, and about 46 percent
+(15,601 firms) appear in only one year. So a panel over all firms would be
+mostly noise.
+
+A usable core does exist. About 10,800 firms appear in 3 or more years, 3,980 in
+5 or more, and 2,483 have 50 or more total postings. So firm-level analysis is
+feasible, but only for a filtered subset meeting a threshold (for example
+appearing in several years or having enough postings), not the full firm set.
+This narrows the linkage picture too: the firms usable for a linked firm panel
+are those that both have enough postings and also appear in the individuals
+data.
 
 ## Governance
 

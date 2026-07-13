@@ -1,0 +1,9 @@
+metric,value
+firms with any postings (non-missing rcid),33717
+firms appearing in only 1 year,15601
+firms appearing in 3+ years,10816
+firms appearing in 5+ years,3980
+firms with 10+ total postings,9156
+firms with 50+ total postings,2483
+median total postings per firm,3
+median years per firm,2
