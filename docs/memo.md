@@ -21,31 +21,31 @@ them.
 
 ## What is on disk
 
-I verified 77 individuals files (yearly parquet, 1950-2026) and 13 postings 
-files.Row counts, formats, and sizes are in `docs/inventory.md` and
+I verified 77 individuals files (yearly parquet, 1950-2026) and 13 postings
+files. Row counts, formats, and sizes are in `docs/inventory.md` and
 `output/inventory_by_file.csv`. Individuals is person-level; postings is
 firm-and-posting level. I counted the postings two ways and both agree
 on 1,574,217 rows.
 
-A caution on the individuals unit of observation. The 46,481,795 rows are not 
-46.5 million job spells. Each file repeats a spell once for every year it was 
-active, so the rows are spell-years, not spells. There are 4,458,257 distinct 
+A caution on the individuals unit of observation. The 46,481,795 rows are not
+46.5 million job spells. Each file repeats a spell once for every year it was
+active, so the rows are spell-years, not spells. There are 4,458,257 distinct
 spells (position_id values), an inflation of about 10.4 times. I confirmed this:
-85.8 percent of 2020's spells also appear in 2019, and for those, the 
-spell-level fields are identical across years. I rebuilt the data at spell 
-level, one row per position_id, in R/10_build_individuals_spell_level.R.
+85.8 percent of 2020's spells also appear in 2019, and for those, the
+spell-level fields are identical across years. I rebuilt the data at spell
+level, one row per position_id, in R/build_individuals_spell_level.R.
 
 ## Coverage and selection
 
-Coverage is low and non-random.The sample skews toward professional, office, and
-technical work, tertiary educated, urban, younger, and English-fluent. Checking 
-the occupation codes directly, the largest groups are computing, sales, office 
-administration, management, and business, with substantial food service too, 
-while manual, agricultural, and informal work is thin or absent (there is no 
-farming, fishing, or forestry at all). Greece's economy isheavy on SMEs, 
-tourism, shipping, self-employment, the public sector, and informal work, most 
-of which is missing or badly undercounted here. Any statement we make describes 
-the covered population, not Greek workers in general. This limits external 
+Coverage is low and non-random. The sample skews toward professional, office, and
+technical work, tertiary educated, urban, younger, and English-fluent. Checking
+the occupation codes directly, the largest groups are computing, sales, office
+administration, management, and business, with substantial food service too,
+while manual, agricultural, and informal work is thin or absent (there is no
+farming, fishing, or forestry at all). Greece's economy is heavy on SMEs,
+tourism, shipping, self-employment, the public sector, and informal work, most
+of which is missing or badly undercounted here. Any statement we make describes
+the covered population, not Greek workers in general. This limits external
 validity for anything at the level of the national labour market.
 
 ## Geography quality
@@ -91,51 +91,51 @@ documentation what the non-predicted flag actually represents.
 
 ## Backfill and the 1950 sentinel
 
-The individuals data runs from 1950, but that history is an artefact, not real. 
-I first read the smooth rise from 1950 as survivorship, current users reporting 
-old jobs. That was wrong. The real mechanism is a sentinel: there are exactly 
+The individuals data runs from 1950, but that history is an artefact, not real.
+I first read the smooth rise from 1950 as survivorship, current users reporting
+old jobs. That was wrong. The real mechanism is a sentinel: there are exactly
 316,566 spells with no start date, and these get floored to 1950 and copied into
-every one of the 77 files. That single repeated block is about half the rows in 
-the early files, and the 1950 file is essentially just that block. So the rise 
-from 1950 is spells with unknown start dates being dated to 1950, not old jobs 
-being reported. The practical conclusion is unchanged, do not use the pre-2012 
-years, but the reason is the sentinel, and it matters because the same 
-null-startdate block sits in recent years like 2024 too, not only the old ones. 
-In the rebuilt spell-level data these spells are flagged (startdate_missing) 
+every one of the 77 files. That single repeated block is about half the rows in
+the early files, and the 1950 file is essentially just that block. So the rise
+from 1950 is spells with unknown start dates being dated to 1950, not old jobs
+being reported. The practical conclusion is unchanged, do not use the pre-2012
+years, but the reason is the sentinel, and it matters because the same
+null-startdate block sits in recent years like 2024 too, not only the old ones.
+In the rebuilt spell-level data these spells are flagged (startdate_missing)
 rather than dropped.
 
 ## Postings coverage over time
 
 The postings data covers 2010 to 2026, but only becomes usable from around 2021.
-The earlier years are very thin, often only a few hundred postings for the 
+The earlier years are very thin, often only a few hundred postings for the
 entire country, which is too little to mean anything. From 2021 the volume grows
-steadily, from about 69,000 to 455,000 by 2025, with 2026 partial because the 
-year is incomplete. One year stands out: 2016 has 51,061 postings, sitting 
-between years with only a few hundred. This is a data-source artefact, not real 
-hiring: 51,041 of those postings (99.96 percent) came from Indeed, a single 
-large dump. More broadly the sources change over time, LinkedIn does not appear 
-until around 2020, and the share of postings with a company id swings year to 
-year. So any cross-year comparison partly reflects changes in data sources, not 
+steadily, from about 69,000 to 455,000 by 2025, with 2026 partial because the
+year is incomplete. One year stands out: 2016 has 51,061 postings, sitting
+between years with only a few hundred. This is a data-source artefact, not real
+hiring: 51,041 of those postings (99.96 percent) came from Indeed, a single
+large dump. More broadly the sources change over time, LinkedIn does not appear
+until around 2020, and the share of postings with a company id swings year to
+year. So any cross-year comparison partly reflects changes in data sources, not
 the labour market.
 
-Testing that directly confirms it. Comparing postings per year three ways, all 
-postings, only those with a company id, and excluding Indeed, the 2016 spike of 
-51,061 drops to 20 once Indeed is removed, so it was entirely a source dump. In 
+Testing that directly confirms it. Comparing postings per year three ways, all
+postings, only those with a company id, and excluding Indeed, the 2016 spike of
+51,061 drops to 20 once Indeed is removed, so it was entirely a source dump. In
 recent years the effect is large too: 2023 and 2024 rise from 333,000 to 418,000
-in the raw counts, but excluding Indeed they are flat at about 158,000 and 
+in the raw counts, but excluding Indeed they are flat at about 158,000 and
 160,000, so most of that apparent growth is Indeed being added, not more hiring.
-There is genuine growth earlier (2020 to 2022 roughly doubles even without 
-Indeed), but the raw series should not be read as a hiring trend. The safer 
+There is genuine growth earlier (2020 to 2022 roughly doubles even without
+Indeed), but the raw series should not be read as a hiring trend. The safer
 series excludes Indeed or requires a company id.
 
-The monthly view dates these source changes exactly. Indeed first appears in 
-December 2015 (so the 2016 dump is Indeed switching on), and LinkedIn first 
-appears in May 2020, which is when the 2020-2021 rise begins. Before 2016 only 
+The monthly view dates these source changes exactly. Indeed first appears in
+December 2015 (so the 2016 dump is Indeed switching on), and LinkedIn first
+appears in May 2020, which is when the 2020-2021 rise begins. Before 2016 only
 company sites and staffing firms feed the data, which is why the early years are
-so thin. So the shape of the series tracks when each source came online as much 
+so thin. So the shape of the series tracks when each source came online as much
 as any change in hiring.
 
-The postings-by-year figure in `output/` shows this, and carries the coverage 
+The postings-by-year figure in `output/` shows this, and carries the coverage
 caveat on its face.
 
 ## Consistency and linkage
@@ -147,9 +147,9 @@ I checked this by comparing column names across years.
 The two datasets share eleven columns, including the company id (rcid), the
 ultimate parent, the role clusters (role_k1500_v2, role_k17000_v3), and
 onet_code. So they use common company and role coding, which is what any linkage
-between labour supply (individuals) and demand (postings) would rely on. The 
-companies also overlap in practice: across all years there are about 33,700 
-firms in the postings, and about 22,200 of them also appear in the individuals 
+between labour supply (individuals) and demand (postings) would rely on. The
+companies also overlap in practice: across all years there are about 33,700
+firms in the postings, and about 22,200 of them also appear in the individuals
 data, roughly two-thirds of posting firms.
 
 Because the columns are identical across years, the yearly files stack (append)
@@ -208,5 +208,5 @@ the confirmations and decisions noted below first.
 ## Next steps
 
 Confirm the modelled-field flags and the open data questions with the
-supervisor, then decide what quesitons are answerable within these
+supervisor, then decide what questions are answerable within these
 limits. No modelling decisions until that is settled.
