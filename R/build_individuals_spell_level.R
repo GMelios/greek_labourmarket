@@ -25,7 +25,8 @@ fs::dir_create(DERIVED_DIR)
 SPELL_COLS <- c("user_id", "position_id", "startdate", "enddate", "rcid",
                 "ultimate_parent_rcid", "seniority", "weight",
                 "role_k1500_v2", "role_k17000_v3", "onet_code",
-                "state", "city", "remote_suitability")
+                "state", "city", "remote_suitability", "salary", "start_salary",
+                "end salary", "total_compensation", "additional_compensation")
 
 files <- individuals_files()
 message(glue("[spell_rebuild] {length(files)} individuals files"))

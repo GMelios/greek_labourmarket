@@ -54,10 +54,10 @@ Regional analysis is only partly reliable, and which field you use matters. In
 the individuals data, the metro_area field is not trustworthy: it reported only
 47 Thessaloniki records while the city field showed 86,804 and the state field
 showed 123,317 for the surrounding region. So metro_area disagrees badly with
-city and state, and should not be used. The state field is reliable and shows a
-strong Athens skew: Attica holds about 35 percent of records and Central
-Macedonia about 9 percent, with everything else small and about 44 percent
-carrying no state.
+city and state, and should not be used. The state field is reliable and shows a 
+strong Athens skew: Attica holds about 40 percent of record and Central
+Macedonia about 10 percentm with everything else small and about 34 percent
+carrying no state. These come from the spell-level data.
 
 Missing geography is also encoded inconsistently: postings use the literal word
 "empty" for a missing region, individuals use a blank (NA), so both forms have
@@ -79,10 +79,10 @@ split.
 
 Salary needs care. In the 2025 postings, the salary_predicted flag is
 true for 95.8 percent of rows, so almost all salary values are predicted
-rather than taken from the posting. In the individuals data the salary
-and compensation fields are populated for nearly every row, which is
-unusual for a wage that is normally not observed, and suggests these are
-modelled as well. Because salary appears to be generated from fields
+rather than taken from the posting. In the individuals data the salary and
+compensation fields are populated for 100 percent of the 4.46 million spells,
+which is impossible for a wage that is not normally observed, and confirms these
+are modelled. Because salary appears to be generated from fields
 like title, seniority, and geography, using it as a wage outcome against
 those same fields would risk circularity. There is a small subset of
 postings, around 4 percent, where salary is not predicted, but it is
