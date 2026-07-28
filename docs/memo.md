@@ -21,13 +21,19 @@ them.
 
 ## What is on disk
 
-I verified 77 individuals files (yearly parquet, 1950-2026, about 46.5
-million job-spell rows) and 13 postings files (yearly zipped csv,
-2010-2026, with 2011- 2014 missing, about 1.57 million rows). Row
-counts, formats, and sizes are in `docs/inventory.md` and
+I verified 77 individuals files (yearly parquet, 1950-2026) and 13 postings 
+files.Row counts, formats, and sizes are in `docs/inventory.md` and
 `output/inventory_by_file.csv`. Individuals is person-level; postings is
 firm-and-posting level. I counted the postings two ways and both agree
 on 1,574,217 rows.
+
+A caution on the individuals unit of observation. The 46,481,795 rows are not 
+46.5 million job spells. Each file repeats a spell once for every year it was 
+active, so the rows are spell-years, not spells. There are 4,458,257 distinct 
+spells (position_id values), an inflation of about 10.4 times. I confirmed this:
+85.8 percent of 2020's spells also appear in 2019, and for those, the 
+spell-level fields are identical across years. I rebuilt the data at spell 
+level, one row per position_id, in R/10_build_individuals_spell_level.R.
 
 ## Coverage and selection
 
@@ -83,18 +89,20 @@ postings, around 4 percent, where salary is not predicted, but it is
 likely self selected, and I have not yet confirmed with the data
 documentation what the non-predicted flag actually represents.
 
-## Backfill and survivorship
+## Backfill and the 1950 sentinel
 
-The individuals data runs from 1950, but it cannot be read as a history
-of the Greek labour market. The row counts rise smoothly every year,
-from 316,600 in 1950 to around 1.5 million by 2024, with no interruption
-for major events like the war years or the financial crisis. A real
-labour market does not grow in a clean line like that. What the data
-actually shows is that people active on the platform today have listed
-jobs going back decades, so the early years reflect who built a profile
-recently and chose to report an old ob, not who was working at the time.
-In line with the data note, I treat counts before roughly 2012 as mainly
-reflecting platform adoption rather than the labour market.
+The individuals data runs from 1950, but that history is an artefact, not real. 
+I first read the smooth rise from 1950 as survivorship, current users reporting 
+old jobs. That was wrong. The real mechanism is a sentinel: there are exactly 
+316,566 spells with no start date, and these get floored to 1950 and copied into
+every one of the 77 files. That single repeated block is about half the rows in 
+the early files, and the 1950 file is essentially just that block. So the rise 
+from 1950 is spells with unknown start dates being dated to 1950, not old jobs 
+being reported. The practical conclusion is unchanged, do not use the pre-2012 
+years, but the reason is the sentinel, and it matters because the same 
+null-startdate block sits in recent years like 2024 too, not only the old ones. 
+In the rebuilt spell-level data these spells are flagged (startdate_missing) 
+rather than dropped.
 
 ## Postings coverage over time
 
