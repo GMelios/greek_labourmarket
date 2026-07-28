@@ -9,6 +9,12 @@
 source(here::here("R", "00_setup.R"))
 source(here::here("R", "helpers.R"))
 
+# a value counts as missing if it is NA or the literal string "empty"
+# (postings encode missing geography as the word "empty", not NA)
+n_missing <- function(col) {
+  sum(is.na(col) | tolower(trimws(as.character(col))) == "empty")
+}
+
 paths <- postings_files()
 message(glue("[descriptives] streaming {length(paths)} postings files"))
 
@@ -19,7 +25,7 @@ per_year <- purrr::map(paths, function(f) {
   list(
     rows    = nrow(df),
     na      = tibble::tibble(variable = names(df),
-                             n_na = purrr::map_dbl(df, ~sum(is.na(.x)))),
+                             n_na = purrr::map_dbl(df, n_missing)),
     year    = tibble::tibble(year = yr) |> dplyr::filter(!is.na(year)) |> dplyr::count(year, name = "n"),
     rolek   = if (has("role_k1500_v2")) dplyr::count(df, level = role_k1500_v2, name = "n") else NULL,
     country = if (has("country")) dplyr::count(df, level = country, name = "n") else NULL,
@@ -30,7 +36,7 @@ per_year <- purrr::map(paths, function(f) {
 total_rows <- sum(purrr::map_dbl(per_year, "rows"))
 message(glue("[descriptives] total postings rows: {format(total_rows, big.mark=',')}"))
 
-# missingness across all postings
+# missingness across all postings ("empty" now counted as missing)
 miss <- purrr::map_dfr(per_year, "na") |>
   dplyr::group_by(variable) |>
   dplyr::summarise(n_na = sum(n_na), .groups = "drop") |>
@@ -44,8 +50,8 @@ headline <- tibble::tibble(
   metric = c("total postings (rows)", "years covered", "distinct companies (rcid)"),
   value  = c(
     format(total_rows, big.mark = ","),
-    as.character(length(unique(purrr::map_dbl(per_year, ~ .x$year$year[1])))),
-    format(purrr::map_dfr(per_year, "firm") |> dplyr::distinct(rcid) |> nrow(), big.mark = ",")
+    as.character(purrr::map_dfr(per_year, "year") |> dplyr::distinct(year) |> nrow()),
+    format(purrr::map_dfr(per_year, "firm") |> dplyr::filter(!is.na(rcid)) |> dplyr::distinct(rcid) |> nrow(), big.mark = ",")
   )
 )
 readr::write_csv(headline, fs::path(OUTPUT_DIR, "postings_headline_counts.csv"))
@@ -66,6 +72,7 @@ roll_up("country", "postings_by_country.csv")
 
 # top companies by posting volume (rcid only, no names beyond the id)
 purrr::map_dfr(per_year, "firm") |>
+  dplyr::filter(!is.na(rcid)) |>
   dplyr::group_by(rcid) |>
   dplyr::summarise(n_postings = sum(n), .groups = "drop") |>
   dplyr::arrange(dplyr::desc(n_postings)) |>

@@ -20,6 +20,12 @@ year_from_name <- function(path) {
   as.integer(stringr::str_extract(fs::path_file(path), "\\d{4}"))
 }
 
+# a value counts as missing if it is NA or the literal string "empty"
+# (postings encode missing geography as the word "empty", not NA)
+is_missing_val <- function(col) {
+  is.na(col) | tolower(trimws(as.character(col))) == "empty"
+}
+
 # ---------------------------------------------------------------------------
 # 2. Readers
 #    Postings are read straight from the zip, nothing is unpacked to disk.
@@ -63,13 +69,16 @@ count_zip_rows <- function(path) {
 #    Your real files also carry sampling weights, occupation codes, and other
 #    inferred fields. Anything not matched returns "observed_unverified" so a
 #    human confirms it against Revelio's documentation. Never treat as final.
+#
+#    Patterns use (^|_) ... ($|_) instead of \b so they fire across underscores:
+#    \b treats "_" as a word character, so \bweight\b would MISS sampling_weight.
 # ---------------------------------------------------------------------------
 MODELLED_PATTERNS <- c(
-  salary       = "salary|compensation|\\bwage\\b|\\bpay\\b",
+  salary       = "salary|compensation|(^|_)wage($|_)|(^|_)pay($|_)",
   seniority    = "senior|seniority",
-  role_cluster = "role_k\\d+|role_k|\\bk1500\\b|\\bk17000\\b",
+  role_cluster = "role_k\\d+|role_k|(^|_)k1500($|_)|(^|_)k17000($|_)",
   occupation   = "onet",
-  weight       = "\\bweight\\b",
+  weight       = "(^|_)weight($|_)",
   remote       = "remote_suitability",
   hires        = "expected_hires"
 )
@@ -113,7 +122,7 @@ safe_example_values <- function(x, varname, max_show = 3L, cardinality_cap = 50L
 
 # ---------------------------------------------------------------------------
 # 5. One-row-per-variable profiler, used by the codebook on a representative
-#    year of each dataset.
+#    year of each dataset. Missingness counts NA and the literal "empty".
 # ---------------------------------------------------------------------------
 profile_df <- function(df, file_label, note_suffix = "") {
   n <- nrow(df)
@@ -123,7 +132,7 @@ profile_df <- function(df, file_label, note_suffix = "") {
       file        = file_label,
       variable    = nm,
       type        = paste(class(col), collapse = "/"),
-      pct_missing = if (n > 0) round(100 * mean(is.na(col)), 2) else NA_real_,
+      pct_missing = if (n > 0) round(100 * mean(is_missing_val(col)), 2) else NA_real_,
       n_distinct  = dplyr::n_distinct(col, na.rm = TRUE),
       example_values       = safe_example_values(col, nm),
       observed_or_modelled = flag,

@@ -45,3 +45,4 @@ Thumbs.db
 # postings files are .csv.zip; block all zip archives too
 *.zip
 .positai
+Greece/

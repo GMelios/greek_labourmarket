@@ -4,8 +4,8 @@ Postings,post_date,Date,0,365,2025-05-16 | 2025-05-30 | 2025-07-16,observed_unve
 Postings,job_id,numeric,0,454952,[redacted: identifier or link],observed_unverified,stats from 2025 file
 Postings,company,character,41.61,17201,"[redacted: high-cardinality text, 17201 distinct]",observed_unverified,stats from 2025 file
 Postings,country,character,0,1,Greece,observed_unverified,stats from 2025 file
-Postings,role_k1500_v2,character,0,1501,"[redacted: high-cardinality text, 1501 distinct]",modelled (role_cluster),"modelled field, not ground truth. stats from 2025 file"
-Postings,state,character,0,15,Attica      | empty       | Peloponnese,observed_unverified,stats from 2025 file
+Postings,role_k1500_v2,character,0.35,1501,"[redacted: high-cardinality text, 1501 distinct]",modelled (role_cluster),"modelled field, not ground truth. stats from 2025 file"
+Postings,state,character,8.36,15,Attica      | empty       | Peloponnese,observed_unverified,stats from 2025 file
 Postings,role_k17000_v3,character,1.04,11304,"[redacted: high-cardinality text, 11304 distinct]",modelled (role_cluster),"modelled field, not ground truth. stats from 2025 file"
 Postings,metro_area,character,0,3,athens metropolitan area             | greece nonmetropolitan area          | dimos thessaloniki metropolitan area,observed_unverified,stats from 2025 file
 Postings,onet_code,character,1.04,952,"[redacted: high-cardinality text, 952 distinct]",modelled (occupation),"modelled field, not ground truth. stats from 2025 file"
