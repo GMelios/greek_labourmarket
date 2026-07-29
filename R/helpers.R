@@ -80,14 +80,19 @@ MODELLED_PATTERNS <- c(
   occupation   = "onet",
   weight       = "(^|_)weight($|_)",
   remote       = "remote_suitability",
-  hires        = "expected_hires"
+  hires        = "expected_hires",
+  imputed_geo  = "^(region|country|state|metro_area|msa|city)$"
 )
 
-flag_modelled <- function(var) {
+flag_modelled <- function(var, file_label = NA_character_) {
   v <- tolower(var)
   hit <- names(MODELLED_PATTERNS)[
     vapply(MODELLED_PATTERNS, function(p) stringr::str_detect(v, p), logical(1))
   ]
+  # geography is imputed only on the individuals side; postings location is off the ad
+  if ("imputed_geo" %in% hit && !identical(tolower(file_label), "individuals")) {
+    hit <- setdiff(hit, "imputed_geo")
+  }
   if (length(hit) > 0) paste0("modelled (", paste(hit, collapse = ", "), ")")
   else "observed_unverified"
 }
@@ -127,7 +132,7 @@ safe_example_values <- function(x, varname, max_show = 3L, cardinality_cap = 50L
 profile_df <- function(df, file_label, note_suffix = "") {
   n <- nrow(df)
   purrr::imap_dfr(df, function(col, nm) {
-    flag <- flag_modelled(nm)
+    flag <- flag_modelled(nm, file_label)
     tibble::tibble(
       file        = file_label,
       variable    = nm,

@@ -32,13 +32,13 @@ Individuals,ticker,character,92.64,2597,[redacted: identifier or link],observed_
 Individuals,startdate,Date,22.65,823,2020-01-01 | 2000-01-01 | 2012-09-01,observed_unverified,stats from 2020 file
 Individuals,user_id,numeric,0,1063571,[redacted: identifier or link],observed_unverified,stats from 2020 file
 Individuals,position_id,numeric,0,1397410,[redacted: identifier or link],observed_unverified,stats from 2020 file
-Individuals,country,character,0,1,Greece,observed_unverified,stats from 2020 file
-Individuals,region,character,0,1,Southern Europe,observed_unverified,stats from 2020 file
-Individuals,state,character,43.77,14,Crete             | Central Macedonia | Attica           ,observed_unverified,stats from 2020 file
-Individuals,metro_area,character,43.77,3,greece nonmetropolitan area          | athens metropolitan area             | dimos thessaloniki metropolitan area,observed_unverified,stats from 2020 file
-Individuals,msa,character,100,2,TX NONMETROPOLITAN AREA                               | New York-Northern New Jersey-Long Island NY-NJ-PA MSA,observed_unverified,stats from 2020 file
+Individuals,country,character,0,1,Greece,modelled (imputed_geo),"modelled field, not ground truth. stats from 2020 file"
+Individuals,region,character,0,1,Southern Europe,modelled (imputed_geo),"modelled field, not ground truth. stats from 2020 file"
+Individuals,state,character,43.77,14,Crete             | Central Macedonia | Attica           ,modelled (imputed_geo),"modelled field, not ground truth. stats from 2020 file"
+Individuals,metro_area,character,43.77,3,greece nonmetropolitan area          | athens metropolitan area             | dimos thessaloniki metropolitan area,modelled (imputed_geo),"modelled field, not ground truth. stats from 2020 file"
+Individuals,msa,character,100,2,TX NONMETROPOLITAN AREA                               | New York-Northern New Jersey-Long Island NY-NJ-PA MSA,modelled (imputed_geo),"modelled field, not ground truth. stats from 2020 file"
 Individuals,enddate,Date,64.93,79,2020-09-01 | 2022-05-01 | 2024-12-01,observed_unverified,stats from 2020 file
-Individuals,city,character,45.42,1697,"[redacted: high-cardinality text, 1697 distinct]",observed_unverified,stats from 2020 file
+Individuals,city,character,45.42,1697,"[redacted: high-cardinality text, 1697 distinct]",modelled (imputed_geo),"modelled field, not ground truth. stats from 2020 file"
 Individuals,remote_suitability,numeric,0,33680,0.005128122 | 0.181236923 | 0.500000000,modelled (remote),"modelled field, not ground truth. stats from 2020 file"
 Individuals,weight,numeric,0,791644,1.230749 | 1.079374 | 1.127075,modelled (weight),"modelled field, not ground truth. stats from 2020 file"
 Individuals,role_k1500_v2,character,0,1497,"[redacted: high-cardinality text, 1497 distinct]",modelled (role_cluster),"modelled field, not ground truth. stats from 2020 file"
