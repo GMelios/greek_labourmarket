@@ -192,6 +192,17 @@ appear in any output. Demographic inference is sensitive under GDPR. The
 repo `.gitignore` blocks all raw data formats, and the codebook redacts
 identifier and free-text example values.
 
+## Worker Flows
+
+The spell start and end dates support worker-flow measures. Counting spell 
+starts as hires reproduces a clear COVID dip: hires fall from 232,696 in 2019
+to 198,762 in 2020, recovering in 2021. That the pandemic shows up in observed
+dates is a validity check that the dates are meaningful. One coverage limit:
+only about 64 percent of hires have a known firm (rcid). So person-level flows
+(total hires and separations) are well observed, but firm-level flows cover
+roughly two-thirds of hires, and anything b uilt on the firm panel carries that
+caveat.
+
 ## Feasibility
 
 What the data can support right now: description of the covered
