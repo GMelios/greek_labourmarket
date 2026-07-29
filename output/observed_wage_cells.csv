@@ -1,0 +1,830 @@
+onet_code,region,year,n_observed
+11-1011.00,Attica,2024,11
+11-1021.00,Attica,2023,15
+11-1021.00,Attica,2024,11
+11-1021.00,Attica,2025,10
+11-2011.00,Attica,2023,50
+11-2011.00,Attica,2024,61
+11-2011.00,Attica,2025,41
+11-2021.00,Attica,2022,10
+11-2021.00,Attica,2023,147
+11-2021.00,Attica,2024,207
+11-2021.00,Attica,2025,53
+11-2021.00,Central Macedonia,2023,13
+11-2021.00,Central Macedonia,2024,20
+11-2021.00,Central Macedonia,2025,14
+11-2022.00,Attica,2023,52
+11-2022.00,Attica,2024,60
+11-2022.00,Attica,2025,68
+11-2022.00,Central Macedonia,2023,12
+11-2022.00,Central Macedonia,2025,12
+11-3012.00,Attica,2023,24
+11-3012.00,Attica,2024,34
+11-3012.00,Attica,2025,44
+11-3013.01,Attica,2023,22
+11-3013.01,Attica,2024,60
+11-3013.01,Attica,2025,22
+11-3031.01,Attica,2023,25
+11-3031.01,Attica,2024,26
+11-3031.01,Attica,2025,25
+11-3051.00,Attica,2023,21
+11-3051.00,Attica,2024,11
+11-3051.00,Central Greece,2023,13
+11-3051.00,Central Macedonia,2024,11
+11-3051.01,Attica,2025,11
+11-3071.00,Attica,2024,11
+11-3071.00,Central Macedonia,2024,13
+11-3071.04,Attica,2023,13
+11-3071.04,Attica,2024,14
+11-3071.04,Attica,2025,11
+11-3071.04,Central Macedonia,2024,24
+11-3121.00,Attica,2022,10
+11-3121.00,Attica,2023,100
+11-3121.00,Attica,2024,146
+11-3121.00,Attica,2025,52
+11-3121.00,Central Greece,2024,11
+11-3121.00,Central Greece,2025,12
+11-3121.00,Central Macedonia,2023,24
+11-3121.00,Central Macedonia,2024,11
+11-3121.00,Central Macedonia,2025,14
+11-3121.00,Crete,2025,10
+11-3121.00,South Aegean,2024,16
+11-3121.00,Thessaly,2024,15
+11-3121.00,Thessaly,2025,13
+11-3131.00,West Greece,2024,12
+11-9021.00,Attica,2024,22
+11-9021.00,Attica,2025,35
+11-9041.00,Attica,2024,10
+11-9051.00,Attica,2023,28
+11-9051.00,Attica,2024,34
+11-9051.00,Attica,2025,17
+11-9051.00,Central Macedonia,2023,15
+11-9051.00,Central Macedonia,2024,10
+11-9051.00,South Aegean,2023,15
+11-9081.00,Attica,2023,15
+11-9081.00,Attica,2024,15
+11-9081.00,Attica,2025,13
+11-9081.00,Central Macedonia,2025,13
+11-9081.00,Ionian Islands,2023,14
+11-9081.00,South Aegean,2023,24
+11-9081.00,South Aegean,2024,14
+11-9081.00,South Aegean,2025,22
+11-9111.00,Attica,2024,10
+11-9141.00,Attica,2024,18
+11-9141.00,Attica,2025,19
+11-9179.00,Attica,2023,13
+11-9179.00,Attica,2024,37
+11-9179.00,Attica,2025,17
+11-9179.02,Attica,2023,14
+11-9179.02,Attica,2024,13
+11-9179.02,Attica,2025,12
+11-9199.00,Attica,2023,10
+11-9199.00,Attica,2024,19
+11-9199.00,Attica,2025,24
+13-1071.00,Attica,2023,20
+13-1071.00,Attica,2024,30
+13-1071.00,Attica,2025,40
+13-1081.02,Attica,2025,18
+13-1082.00,Attica,2024,15
+13-1082.00,Central Macedonia,2023,15
+13-1121.00,Attica,2024,10
+13-1121.00,Attica,2025,21
+13-1121.00,Central Macedonia,2025,11
+13-1151.00,Attica,2024,23
+13-1151.00,Attica,2025,10
+13-1151.00,West Greece,2024,11
+13-1161.00,Attica,2023,69
+13-1161.00,Attica,2024,27
+13-1161.01,Attica,2023,21
+13-1161.01,Attica,2024,55
+13-1161.01,Attica,2025,85
+13-1161.01,Central Macedonia,2024,24
+13-1161.01,Central Macedonia,2025,17
+13-1199.00,Attica,2024,23
+13-1199.00,Attica,2025,17
+13-1199.06,Attica,2023,19
+13-1199.06,Attica,2024,17
+13-1199.06,Attica,2025,29
+13-1199.07,Attica,2023,13
+13-1199.07,Attica,2025,12
+13-2011.00,Attica,2023,16
+13-2011.00,Attica,2024,19
+13-2011.00,Attica,2025,29
+13-2041.00,Attica,2025,15
+13-2053.00,Attica,2025,11
+13-2054.00,West Macedonia,2021,18
+13-2082.00,West Macedonia,2025,20
+15-1221.00,Attica,2024,23
+15-1221.00,Attica,2025,16
+15-1231.00,Attica,2024,15
+15-1232.00,Attica,2023,65
+15-1232.00,Attica,2024,98
+15-1232.00,Attica,2025,118
+15-1232.00,Central Macedonia,2023,38
+15-1232.00,Central Macedonia,2024,56
+15-1232.00,Central Macedonia,2025,24
+15-1232.00,Epirus,2024,11
+15-1232.00,South Aegean,2023,11
+15-1241.01,Attica,2023,10
+15-1243.01,Attica,2024,14
+15-1252.00,Attica,2023,42
+15-1252.00,Attica,2024,127
+15-1252.00,Attica,2025,90
+15-1252.00,Central Macedonia,2023,13
+15-1252.00,Central Macedonia,2024,11
+15-1252.00,Central Macedonia,2025,11
+15-1253.00,Attica,2025,15
+15-1254.00,Attica,2023,31
+15-1254.00,Attica,2024,98
+15-1254.00,Attica,2025,70
+15-1254.00,Central Macedonia,2023,11
+15-1254.00,Central Macedonia,2024,17
+15-1254.00,Central Macedonia,2025,12
+15-1255.00,Attica,2023,24
+15-1255.00,Attica,2024,28
+15-1255.00,Attica,2025,13
+15-1299.05,Attica,2025,16
+15-1299.08,Attica,2023,19
+15-1299.08,Attica,2024,34
+15-1299.08,Attica,2025,34
+15-1299.08,Central Greece,2024,10
+15-1299.09,Attica,2023,22
+15-1299.09,Attica,2024,45
+15-1299.09,Attica,2025,76
+15-2051.00,Attica,2025,25
+15-2051.01,Attica,2023,15
+15-2051.01,Attica,2024,30
+15-2051.01,Attica,2025,41
+17-2051.00,Attica,2024,14
+17-2051.00,Attica,2025,18
+17-2071.00,Attica,2023,46
+17-2071.00,Attica,2024,55
+17-2071.00,Attica,2025,32
+17-2071.00,Central Macedonia,2023,17
+17-2071.00,Central Macedonia,2024,15
+17-2071.00,Central Macedonia,2025,12
+17-2141.00,Attica,2024,23
+17-2141.00,Attica,2025,29
+17-2199.00,Attica,2023,10
+17-2199.00,Attica,2024,11
+17-2199.00,Attica,2025,17
+19-1031.03,Attica,2024,16
+19-2041.01,Central Macedonia,2023,13
+19-2042.00,Attica,2024,14
+19-4061.00,Attica,2024,14
+19-4061.00,Attica,2025,11
+21-1013.00,Attica,2023,22
+21-1013.00,Central Macedonia,2023,13
+21-1099.00,Attica,2023,15
+21-1099.00,Attica,2024,21
+21-1099.00,Attica,2025,15
+25-1054.00,Attica,2023,14
+25-1071.00,Attica,2023,42
+25-1071.00,Central Macedonia,2023,17
+25-1113.00,Attica,2023,11
+25-1121.00,Attica,2024,10
+25-1193.00,Attica,2023,30
+25-2011.00,West Macedonia,2025,11
+25-2012.00,Attica,2023,15
+25-2012.00,Attica,2024,11
+25-2012.00,Central Macedonia,2024,15
+25-2031.00,Attica,2023,32
+25-2031.00,Attica,2024,34
+25-2031.00,Attica,2025,22
+25-2031.00,Central Macedonia,2023,10
+25-3021.00,Attica,2023,53
+25-3021.00,Attica,2025,13
+25-3021.00,Central Macedonia,2023,16
+25-9031.00,Attica,2024,26
+25-9031.00,West Greece,2024,10
+27-1014.00,Attica,2024,15
+27-1024.00,Attica,2023,35
+27-1024.00,Attica,2024,34
+27-1024.00,Attica,2025,33
+27-1024.00,Central Macedonia,2023,10
+27-1024.00,Central Macedonia,2024,12
+27-1025.00,Attica,2024,12
+27-2031.00,Attica,2023,82
+27-2031.00,Attica,2025,24
+27-2031.00,Central Macedonia,2023,16
+27-2041.00,Attica,2023,37
+27-2041.00,Attica,2024,54
+27-2041.00,Attica,2025,31
+27-2041.00,Crete,2023,14
+27-2041.00,South Aegean,2023,19
+27-2041.00,South Aegean,2024,18
+27-2041.00,South Aegean,2025,26
+27-2099.00,Attica,2023,11
+27-2099.00,Attica,2024,11
+27-2099.00,Central Macedonia,2023,17
+27-3031.00,Attica,2023,22
+27-3031.00,Attica,2024,31
+27-3031.00,Attica,2025,36
+27-3031.00,Central Macedonia,2025,10
+27-3043.00,Attica,2023,17
+27-3043.00,Attica,2024,28
+27-3043.00,Attica,2025,26
+27-3043.05,Attica,2023,15
+27-3043.05,Attica,2024,36
+27-3043.05,Attica,2025,14
+27-3043.05,Central Macedonia,2023,11
+27-3043.05,Central Macedonia,2024,17
+27-3091.00,Attica,2024,17
+27-3091.00,Attica,2025,13
+27-4032.00,Attica,2025,22
+29-1021.00,West Macedonia,2022,10
+29-1021.00,West Macedonia,2023,17
+29-1051.00,Attica,2023,22
+29-1051.00,Attica,2024,21
+29-1051.00,Attica,2025,15
+29-1123.00,Attica,2025,11
+29-1129.01,Attica,2023,130
+29-1129.01,Attica,2025,23
+29-1129.01,Central Macedonia,2022,11
+29-1129.01,Central Macedonia,2023,74
+29-1129.01,Crete,2023,11
+29-1129.01,Epirus,2023,75
+29-1129.01,Ionian Islands,2023,11
+29-1129.01,South Aegean,2023,17
+29-1129.01,West Greece,2023,13
+29-1129.02,Attica,2023,13
+29-1129.02,Central Macedonia,2023,16
+29-1141.00,Attica,2021,13
+29-1141.00,Attica,2022,20
+29-1141.00,Attica,2023,23
+29-1141.00,Attica,2024,24
+29-1141.00,Attica,2025,41
+29-1141.03,Attica,2024,11
+29-1141.04,Attica,2024,10
+29-1141.04,Attica,2025,12
+29-1223.00,Attica,2024,11
+29-1229.02,Attica,2024,10
+29-1229.04,Attica,2024,14
+29-1291.00,Attica,2023,25
+29-1291.00,Central Macedonia,2023,10
+29-2061.00,Attica,2022,21
+29-2061.00,Attica,2023,17
+29-2061.00,Attica,2025,29
+29-2081.00,Attica,2024,11
+29-2081.00,South Aegean,2023,29
+29-2081.00,South Aegean,2024,38
+29-2081.00,South Aegean,2025,15
+29-2099.00,Attica,2025,10
+29-9099.00,Attica,2023,12
+29-9099.00,Central Macedonia,2023,10
+29-9099.01,Attica,2023,12
+29-9099.01,Central Macedonia,2023,15
+31-1122.00,Attica,2024,20
+31-1122.00,South Aegean,2023,10
+31-1132.00,Attica,2023,16
+31-1132.00,Central Macedonia,2023,26
+31-2011.00,Attica,2025,35
+31-2011.00,Central Greece,2025,17
+31-2011.00,Central Macedonia,2025,19
+31-9011.00,Attica,2023,21
+31-9011.00,Attica,2024,25
+31-9011.00,Attica,2025,27
+31-9091.00,Attica,2025,11
+31-9091.00,West Macedonia,2025,12
+33-3051.04,Attica,2025,10
+33-3051.04,Crete,2025,21
+33-9032.00,Attica,2023,12
+33-9032.00,Attica,2024,19
+33-9032.00,Attica,2025,37
+33-9032.00,Central Macedonia,2025,15
+33-9032.00,West Greece,2025,13
+33-9032.00,West Macedonia,2022,34
+33-9099.02,Attica,2025,10
+35-1011.00,Attica,2023,164
+35-1011.00,Attica,2024,154
+35-1011.00,Attica,2025,69
+35-1011.00,Central Macedonia,2023,34
+35-1011.00,Central Macedonia,2024,29
+35-1011.00,Central Macedonia,2025,17
+35-1011.00,Crete,2023,14
+35-1011.00,Crete,2024,13
+35-1011.00,Crete,2025,20
+35-1011.00,East Macedonia and Thrace,2023,12
+35-1011.00,Epirus,2024,12
+35-1011.00,Ionian Islands,2023,21
+35-1011.00,Ionian Islands,2024,28
+35-1011.00,Ionian Islands,2025,19
+35-1011.00,South Aegean,2023,31
+35-1011.00,South Aegean,2024,45
+35-1011.00,South Aegean,2025,32
+35-1011.00,Thessaly,2023,20
+35-1011.00,Thessaly,2024,16
+35-1011.00,Thessaly,2025,15
+35-1011.00,West Greece,2023,10
+35-1011.00,West Macedonia,2025,11
+35-2012.00,Attica,2024,21
+35-2012.00,Attica,2025,10
+35-2019.00,Attica,2023,91
+35-2019.00,Attica,2024,100
+35-2019.00,Attica,2025,73
+35-2019.00,Central Macedonia,2023,57
+35-2019.00,Central Macedonia,2024,55
+35-2019.00,Central Macedonia,2025,29
+35-2019.00,Crete,2023,27
+35-2019.00,Crete,2024,27
+35-2019.00,Crete,2025,27
+35-2019.00,East Macedonia and Thrace,2023,15
+35-2019.00,East Macedonia and Thrace,2025,11
+35-2019.00,Epirus,2023,95
+35-2019.00,Epirus,2024,80
+35-2019.00,Epirus,2025,20
+35-2019.00,Ionian Islands,2023,27
+35-2019.00,Ionian Islands,2024,23
+35-2019.00,Ionian Islands,2025,35
+35-2019.00,Peloponnese,2023,14
+35-2019.00,South Aegean,2023,72
+35-2019.00,South Aegean,2024,65
+35-2019.00,South Aegean,2025,46
+35-2019.00,Thessaly,2023,30
+35-2019.00,Thessaly,2024,38
+35-2019.00,Thessaly,2025,30
+35-2019.00,West Greece,2023,15
+35-2019.00,West Greece,2024,18
+35-2019.00,West Macedonia,2021,10
+35-2019.00,West Macedonia,2023,11
+35-2019.00,West Macedonia,2025,17
+35-2021.00,Attica,2025,15
+35-3011.00,Attica,2023,60
+35-3011.00,Attica,2024,66
+35-3011.00,Attica,2025,50
+35-3011.00,Central Macedonia,2023,28
+35-3011.00,Central Macedonia,2024,32
+35-3011.00,Central Macedonia,2025,13
+35-3011.00,Crete,2023,10
+35-3011.00,Crete,2024,13
+35-3011.00,Crete,2025,15
+35-3011.00,East Macedonia and Thrace,2024,12
+35-3011.00,Epirus,2024,11
+35-3011.00,Ionian Islands,2023,14
+35-3011.00,Ionian Islands,2024,19
+35-3011.00,Ionian Islands,2025,19
+35-3011.00,South Aegean,2023,36
+35-3011.00,South Aegean,2024,39
+35-3011.00,South Aegean,2025,36
+35-3011.00,Thessaly,2024,12
+35-3011.00,Thessaly,2025,18
+35-3011.00,West Greece,2024,13
+35-3023.00,Attica,2023,23
+35-3023.00,Attica,2024,31
+35-3023.00,Attica,2025,97
+35-3023.00,Central Macedonia,2023,14
+35-3023.00,Central Macedonia,2024,23
+35-3023.00,Central Macedonia,2025,11
+35-3023.00,Crete,2023,11
+35-3023.00,Crete,2024,11
+35-3023.00,South Aegean,2023,11
+35-3023.00,South Aegean,2024,14
+35-3023.01,Attica,2023,80
+35-3023.01,Attica,2024,81
+35-3023.01,Attica,2025,69
+35-3023.01,Central Macedonia,2023,47
+35-3023.01,Central Macedonia,2024,29
+35-3023.01,Central Macedonia,2025,15
+35-3023.01,Crete,2023,11
+35-3023.01,Crete,2024,24
+35-3023.01,Crete,2025,13
+35-3023.01,Epirus,2023,97
+35-3023.01,Epirus,2024,74
+35-3023.01,Epirus,2025,24
+35-3023.01,Ionian Islands,2023,13
+35-3023.01,Ionian Islands,2024,16
+35-3023.01,Ionian Islands,2025,19
+35-3023.01,South Aegean,2023,27
+35-3023.01,South Aegean,2024,49
+35-3023.01,South Aegean,2025,56
+35-3023.01,Thessaly,2023,23
+35-3023.01,Thessaly,2024,45
+35-3023.01,Thessaly,2025,46
+35-3023.01,West Greece,2023,10
+35-3023.01,West Greece,2024,26
+35-3023.01,West Greece,2025,13
+35-3031.00,Attica,2023,74
+35-3031.00,Attica,2024,71
+35-3031.00,Attica,2025,70
+35-3031.00,Central Greece,2025,11
+35-3031.00,Central Macedonia,2023,51
+35-3031.00,Central Macedonia,2024,43
+35-3031.00,Central Macedonia,2025,23
+35-3031.00,Crete,2023,17
+35-3031.00,Crete,2024,19
+35-3031.00,Crete,2025,34
+35-3031.00,East Macedonia and Thrace,2025,10
+35-3031.00,Epirus,2023,12
+35-3031.00,Epirus,2024,17
+35-3031.00,Epirus,2025,21
+35-3031.00,Ionian Islands,2023,26
+35-3031.00,Ionian Islands,2024,26
+35-3031.00,Ionian Islands,2025,48
+35-3031.00,Peloponnese,2024,12
+35-3031.00,Peloponnese,2025,12
+35-3031.00,South Aegean,2023,56
+35-3031.00,South Aegean,2024,65
+35-3031.00,South Aegean,2025,63
+35-3031.00,Thessaly,2024,18
+35-3031.00,Thessaly,2025,19
+35-3031.00,West Greece,2024,17
+35-9011.00,Attica,2024,11
+35-9011.00,Attica,2025,10
+35-9031.00,Attica,2023,42
+35-9031.00,Attica,2024,60
+35-9031.00,Attica,2025,40
+35-9031.00,Central Macedonia,2024,12
+35-9031.00,Crete,2023,17
+35-9031.00,Crete,2025,13
+35-9031.00,Epirus,2025,13
+35-9031.00,Ionian Islands,2023,18
+35-9031.00,Ionian Islands,2024,10
+35-9031.00,Ionian Islands,2025,14
+35-9031.00,Peloponnese,2024,18
+35-9031.00,Peloponnese,2025,14
+35-9031.00,South Aegean,2023,21
+35-9031.00,South Aegean,2024,32
+35-9031.00,South Aegean,2025,32
+35-9031.00,Thessaly,2023,10
+37-1011.00,Attica,2024,12
+37-1011.00,Attica,2025,13
+37-2012.00,Attica,2023,35
+37-2012.00,Attica,2024,44
+37-2012.00,Attica,2025,23
+37-2012.00,Central Macedonia,2023,15
+37-2012.00,South Aegean,2023,11
+37-2012.00,South Aegean,2024,17
+37-2012.00,South Aegean,2025,10
+37-2019.00,Attica,2023,38
+37-2019.00,Attica,2024,62
+37-2019.00,Attica,2025,42
+37-2019.00,Central Macedonia,2023,25
+37-2019.00,Central Macedonia,2024,28
+37-2019.00,Central Macedonia,2025,10
+37-2019.00,East Macedonia and Thrace,2023,10
+37-2019.00,East Macedonia and Thrace,2024,14
+37-2019.00,East Macedonia and Thrace,2025,10
+37-2019.00,South Aegean,2023,13
+37-2019.00,South Aegean,2024,10
+37-2019.00,West Macedonia,2025,10
+39-2011.00,Attica,2023,12
+39-2021.00,Attica,2025,14
+39-3093.00,Attica,2023,12
+39-3093.00,Attica,2024,30
+39-3093.00,Attica,2025,18
+39-4012.00,Attica,2023,50
+39-4012.00,Central Macedonia,2022,16
+39-4012.00,Central Macedonia,2023,23
+39-5011.00,Attica,2023,25
+39-5011.00,Attica,2024,36
+39-5011.00,Attica,2025,17
+39-5011.00,Crete,2024,12
+39-5011.00,South Aegean,2023,18
+39-5011.00,South Aegean,2024,13
+39-5012.00,Attica,2023,33
+39-5012.00,Attica,2025,28
+39-5012.00,Central Macedonia,2023,24
+39-5012.00,West Macedonia,2025,11
+39-5093.00,Attica,2025,13
+39-6012.00,Attica,2025,19
+39-6012.00,Central Macedonia,2025,10
+39-6012.00,South Aegean,2025,13
+39-7011.00,Attica,2023,48
+39-7011.00,Attica,2024,26
+39-7011.00,Attica,2025,27
+39-7011.00,Central Macedonia,2023,27
+39-7011.00,Central Macedonia,2025,10
+39-7011.00,South Aegean,2023,11
+39-7011.00,South Aegean,2025,14
+39-7012.00,Attica,2023,16
+39-9011.00,Central Macedonia,2024,11
+39-9011.00,Central Macedonia,2025,14
+39-9011.01,Attica,2023,10
+39-9011.01,Attica,2024,10
+39-9031.00,Attica,2023,54
+39-9031.00,Attica,2024,18
+39-9031.00,Attica,2025,28
+39-9031.00,Central Macedonia,2023,34
+39-9032.00,Attica,2023,49
+39-9032.00,Central Macedonia,2023,16
+39-9032.00,West Greece,2023,10
+39-9099.00,Attica,2022,25
+39-9099.00,Attica,2023,28
+39-9099.00,Attica,2024,33
+39-9099.00,Attica,2025,20
+39-9099.00,South Aegean,2025,12
+41-1011.00,Attica,2022,11
+41-1011.00,Attica,2023,50
+41-1011.00,Attica,2024,23
+41-1011.00,Attica,2025,44
+41-1011.00,Crete,2025,18
+41-1011.00,South Aegean,2023,14
+41-1011.00,South Aegean,2024,16
+41-1011.00,West Macedonia,2021,11
+41-1012.00,Attica,2025,10
+41-2021.00,Attica,2023,10
+41-2021.00,Attica,2024,27
+41-2021.00,Attica,2025,25
+41-2021.00,Crete,2025,11
+41-2021.00,South Aegean,2024,17
+41-2021.00,South Aegean,2025,11
+41-2022.00,Attica,2024,10
+41-2022.00,Attica,2025,22
+41-2022.00,Central Macedonia,2025,11
+41-2031.00,Attica,2022,38
+41-2031.00,Attica,2023,395
+41-2031.00,Attica,2024,537
+41-2031.00,Attica,2025,469
+41-2031.00,Central Greece,2023,13
+41-2031.00,Central Greece,2024,14
+41-2031.00,Central Greece,2025,15
+41-2031.00,Central Macedonia,2023,104
+41-2031.00,Central Macedonia,2024,96
+41-2031.00,Central Macedonia,2025,86
+41-2031.00,Crete,2023,45
+41-2031.00,Crete,2024,45
+41-2031.00,Crete,2025,62
+41-2031.00,East Macedonia and Thrace,2023,20
+41-2031.00,East Macedonia and Thrace,2024,25
+41-2031.00,East Macedonia and Thrace,2025,12
+41-2031.00,Epirus,2023,119
+41-2031.00,Epirus,2024,91
+41-2031.00,Epirus,2025,27
+41-2031.00,Ionian Islands,2023,23
+41-2031.00,Ionian Islands,2024,18
+41-2031.00,Ionian Islands,2025,19
+41-2031.00,Peloponnese,2023,12
+41-2031.00,Peloponnese,2024,22
+41-2031.00,Peloponnese,2025,23
+41-2031.00,South Aegean,2022,11
+41-2031.00,South Aegean,2023,80
+41-2031.00,South Aegean,2024,93
+41-2031.00,South Aegean,2025,96
+41-2031.00,Thessaly,2023,26
+41-2031.00,Thessaly,2024,46
+41-2031.00,Thessaly,2025,34
+41-2031.00,West Greece,2023,31
+41-2031.00,West Greece,2024,43
+41-2031.00,West Greece,2025,35
+41-2031.00,West Macedonia,2022,18
+41-2031.00,West Macedonia,2023,21
+41-3011.00,Attica,2023,56
+41-3011.00,Attica,2024,75
+41-3011.00,Attica,2025,32
+41-3011.00,Central Macedonia,2023,20
+41-3011.00,Central Macedonia,2024,15
+41-3031.00,Attica,2025,41
+41-3041.00,Attica,2023,19
+41-3041.00,Attica,2024,12
+41-3041.00,Attica,2025,39
+41-3041.00,Central Macedonia,2025,10
+41-3091.00,Attica,2023,60
+41-3091.00,Attica,2024,91
+41-3091.00,Attica,2025,112
+41-3091.00,Central Macedonia,2023,10
+41-3091.00,Central Macedonia,2024,13
+41-3091.00,Central Macedonia,2025,26
+41-4011.00,Attica,2023,14
+41-4011.00,Attica,2024,11
+41-4011.00,Attica,2025,32
+41-4011.00,Central Macedonia,2023,23
+41-4012.00,Attica,2022,15
+41-4012.00,Attica,2023,189
+41-4012.00,Attica,2024,293
+41-4012.00,Attica,2025,258
+41-4012.00,Central Macedonia,2023,19
+41-4012.00,Central Macedonia,2024,38
+41-4012.00,Central Macedonia,2025,31
+41-4012.00,Crete,2023,18
+41-4012.00,Crete,2024,23
+41-4012.00,Crete,2025,24
+41-4012.00,East Macedonia and Thrace,2024,11
+41-4012.00,Peloponnese,2024,10
+41-4012.00,South Aegean,2023,21
+41-4012.00,South Aegean,2024,11
+41-4012.00,South Aegean,2025,16
+41-4012.00,Thessaly,2024,10
+41-4012.00,Thessaly,2025,14
+41-4012.00,West Greece,2024,11
+41-4012.00,West Greece,2025,11
+41-9011.00,Attica,2023,34
+41-9011.00,Attica,2024,38
+41-9011.00,Attica,2025,32
+41-9011.00,South Aegean,2024,10
+41-9021.00,Attica,2025,19
+41-9022.00,Attica,2023,13
+41-9022.00,Attica,2024,21
+41-9022.00,Attica,2025,87
+41-9031.00,Attica,2023,17
+41-9031.00,Attica,2024,63
+41-9031.00,Attica,2025,76
+41-9041.00,Attica,2025,10
+41-9091.00,Attica,2023,12
+41-9091.00,Central Macedonia,2023,13
+41-9099.00,Attica,2023,47
+41-9099.00,Attica,2024,26
+41-9099.00,Attica,2025,18
+41-9099.00,Central Macedonia,2023,37
+43-2021.00,Attica,2024,14
+43-2021.00,Attica,2025,10
+43-3011.00,Attica,2023,10
+43-3011.00,Attica,2024,12
+43-3031.00,Attica,2024,12
+43-3031.00,Attica,2025,14
+43-3071.00,Attica,2023,29
+43-3071.00,Attica,2024,17
+43-3071.00,Attica,2025,66
+43-4041.00,Attica,2025,27
+43-4051.00,Attica,2021,17
+43-4051.00,Attica,2022,40
+43-4051.00,Attica,2023,228
+43-4051.00,Attica,2024,384
+43-4051.00,Attica,2025,706
+43-4051.00,Central Greece,2023,13
+43-4051.00,Central Macedonia,2023,30
+43-4051.00,Central Macedonia,2024,52
+43-4051.00,Central Macedonia,2025,70
+43-4051.00,Crete,2023,21
+43-4051.00,Crete,2024,25
+43-4051.00,Crete,2025,27
+43-4051.00,East Macedonia and Thrace,2024,15
+43-4051.00,Ionian Islands,2024,16
+43-4051.00,Ionian Islands,2025,17
+43-4051.00,South Aegean,2024,22
+43-4051.00,South Aegean,2025,31
+43-4051.00,Thessaly,2024,13
+43-4051.00,Thessaly,2025,10
+43-4051.00,West Greece,2023,16
+43-4051.00,West Greece,2024,13
+43-4051.00,West Greece,2025,10
+43-4051.00,West Macedonia,2024,11
+43-4081.00,Attica,2023,25
+43-4081.00,Attica,2024,27
+43-4081.00,Attica,2025,14
+43-4081.00,Crete,2025,10
+43-4081.00,South Aegean,2023,32
+43-4081.00,South Aegean,2024,24
+43-4081.00,South Aegean,2025,12
+43-4141.00,Attica,2024,15
+43-4141.00,Attica,2025,30
+43-4171.00,Attica,2023,35
+43-4171.00,Attica,2024,36
+43-4171.00,Attica,2025,22
+43-4171.00,Crete,2023,17
+43-4171.00,South Aegean,2023,10
+43-4171.00,South Aegean,2025,12
+43-4181.00,Attica,2023,11
+43-4181.00,Attica,2025,18
+43-4181.00,South Aegean,2024,12
+43-4181.00,South Aegean,2025,10
+43-5011.00,Attica,2025,12
+43-5071.00,Attica,2022,10
+43-5071.00,Attica,2023,58
+43-5071.00,Attica,2024,44
+43-5071.00,Attica,2025,49
+43-5071.00,Central Greece,2023,24
+43-5071.00,Central Greece,2024,12
+43-5071.00,Central Macedonia,2023,12
+43-5071.00,Central Macedonia,2024,11
+43-5071.00,Central Macedonia,2025,13
+43-5071.00,Crete,2025,18
+43-6011.00,Attica,2023,29
+43-6011.00,Attica,2024,37
+43-6011.00,Attica,2025,40
+43-9081.00,Attica,2025,14
+43-9081.00,Central Macedonia,2024,51
+43-9081.00,Central Macedonia,2025,15
+43-9199.00,Attica,2022,17
+43-9199.00,Attica,2023,79
+43-9199.00,Attica,2024,83
+43-9199.00,Attica,2025,57
+43-9199.00,Central Macedonia,2024,15
+43-9199.00,Crete,2025,18
+43-9199.00,South Aegean,2023,37
+43-9199.00,South Aegean,2024,36
+43-9199.00,South Aegean,2025,28
+45-2093.00,Attica,2023,39
+47-2111.00,Attica,2022,13
+47-2111.00,Attica,2023,30
+47-2111.00,Attica,2024,20
+47-2111.00,Attica,2025,32
+47-2111.00,Central Macedonia,2022,10
+47-2111.00,Central Macedonia,2023,12
+47-2111.00,Central Macedonia,2025,12
+47-2152.00,Attica,2025,12
+47-4099.00,Attica,2023,12
+47-4099.00,Attica,2024,13
+49-2011.00,Attica,2024,16
+49-2093.00,Attica,2025,26
+49-3053.00,Attica,2023,20
+49-3053.00,Attica,2024,18
+49-3053.00,Attica,2025,21
+49-3053.00,Central Macedonia,2023,10
+49-9021.00,Attica,2025,12
+49-9041.00,Attica,2023,13
+49-9041.00,Attica,2024,14
+49-9041.00,Attica,2025,14
+49-9043.00,Attica,2024,16
+49-9043.00,Attica,2025,10
+49-9062.00,Attica,2023,14
+49-9062.00,Attica,2024,24
+49-9062.00,Attica,2025,11
+49-9071.00,Attica,2024,17
+49-9081.00,Attica,2024,10
+51-1011.00,Attica,2025,17
+51-1011.00,Central Macedonia,2023,36
+51-1011.00,Central Macedonia,2024,30
+51-3011.00,Attica,2023,11
+51-3011.00,Attica,2024,13
+51-3011.00,South Aegean,2024,11
+51-3091.00,Attica,2023,14
+51-3091.00,Attica,2024,10
+51-3093.00,Attica,2023,23
+51-3093.00,Attica,2024,12
+51-6042.00,Attica,2024,12
+51-6099.00,Attica,2023,27
+51-6099.00,Attica,2024,23
+51-7031.00,Attica,2023,17
+51-7031.00,Central Macedonia,2023,10
+51-9192.00,Attica,2023,13
+51-9196.00,Attica,2025,14
+51-9198.00,Attica,2023,22
+51-9198.00,Attica,2024,21
+51-9198.00,Central Greece,2023,10
+51-9198.00,Central Greece,2024,12
+51-9198.00,Central Macedonia,2023,15
+53-1044.00,Attica,2025,11
+53-3031.00,Attica,2023,17
+53-3031.00,Attica,2024,26
+53-3031.00,Attica,2025,41
+53-3031.00,Central Macedonia,2023,10
+53-3031.00,Epirus,2023,92
+53-3031.00,Epirus,2024,65
+53-3032.00,Attica,2025,65
+53-3032.00,Crete,2025,48
+53-3033.00,Attica,2023,37
+53-3033.00,Attica,2024,55
+53-3033.00,Attica,2025,91
+53-3033.00,Central Macedonia,2023,13
+53-3033.00,Central Macedonia,2024,16
+53-3033.00,Central Macedonia,2025,20
+53-3033.00,Crete,2025,47
+53-3033.00,South Aegean,2023,23
+53-3033.00,South Aegean,2024,27
+53-3033.00,South Aegean,2025,31
+53-3033.00,West Greece,2023,35
+53-3033.00,West Greece,2024,19
+53-3033.00,West Macedonia,2023,15
+53-7051.00,Attica,2025,70
+53-7051.00,Crete,2025,27
+53-7051.00,North Aegean,2025,14
+53-7063.00,Attica,2025,10
+53-7063.00,Crete,2025,10
+53-7065.00,Attica,2023,10
+53-7065.00,Attica,2024,14
+53-7065.00,Attica,2025,28
+53-7065.00,Crete,2024,17
+53-7065.00,Crete,2025,17
+Retired,Attica,2025,10
+unknown,Attica,2022,108
+unknown,Attica,2023,750
+unknown,Attica,2024,1681
+unknown,Attica,2025,1141
+unknown,Central Greece,2023,63
+unknown,Central Greece,2024,105
+unknown,Central Greece,2025,91
+unknown,Central Macedonia,2022,39
+unknown,Central Macedonia,2023,350
+unknown,Central Macedonia,2024,593
+unknown,Central Macedonia,2025,355
+unknown,Crete,2022,22
+unknown,Crete,2023,99
+unknown,Crete,2024,201
+unknown,Crete,2025,178
+unknown,East Macedonia and Thrace,2023,31
+unknown,East Macedonia and Thrace,2024,53
+unknown,East Macedonia and Thrace,2025,50
+unknown,Epirus,2023,97
+unknown,Epirus,2024,197
+unknown,Epirus,2025,102
+unknown,Ionian Islands,2023,43
+unknown,Ionian Islands,2024,87
+unknown,Ionian Islands,2025,74
+unknown,North Aegean,2024,19
+unknown,North Aegean,2025,14
+unknown,Peloponnese,2023,18
+unknown,Peloponnese,2024,64
+unknown,Peloponnese,2025,43
+unknown,South Aegean,2022,29
+unknown,South Aegean,2023,157
+unknown,South Aegean,2024,375
+unknown,South Aegean,2025,264
+unknown,Thessaly,2023,76
+unknown,Thessaly,2024,185
+unknown,Thessaly,2025,197
+unknown,West Greece,2023,75
+unknown,West Greece,2024,175
+unknown,West Greece,2025,126
+unknown,West Macedonia,2023,17
+unknown,West Macedonia,2024,31
+unknown,West Macedonia,2025,14
